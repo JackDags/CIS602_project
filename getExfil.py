@@ -36,7 +36,7 @@ def getExfil():
     if not (os.path.isdir("exfilData/day2")):
         os.system("tcpflow -r pcapFiles/filteredFTP1000.pcap -o exfilData/day1")
 
-    treeDay2 = et.parse("exfilData/day2/report.xml")
+    treeDay2 = et.parse("report.xml")
     rootDay2 = treeDay2.getroot()
     day2 = createExfil(rootDay2)
 
