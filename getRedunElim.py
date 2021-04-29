@@ -11,7 +11,7 @@ def unique(list):
     uniqueList = []
     uniqueList.append(list[0])
 
-    for i in range(1, len(list)-57):
+    for i in range(1, len(list)):
         equal = False
         for j in range(len(uniqueList)):
             if list[i].data == uniqueList[j].data:

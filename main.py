@@ -26,7 +26,7 @@ print("Pre-fingerprinting packet amount: {}\n".format(packet_amount))
 
 # call getExfil
 print("Getting Fingerprint...")
-day1, day2 = getExfil()
+day2 = getExfil()
 print("Done\n")
 
 # print out results
@@ -35,7 +35,6 @@ print("Amount of packets in packet list: {}\n".format(len(day2)))
 
 # call getRedunElim
 print("Redundancy Elimination...")
-uniqueListDay1 = unique(day1)
 uniqueListDay2 = unique(day2)
 print("Done\n")
 
