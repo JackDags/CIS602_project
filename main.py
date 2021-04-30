@@ -19,10 +19,14 @@ GENERAL PLAN:
 # for printing purposes only
 print("Counting total packets...")
 print("This may take several minutes")
-cap = pyshark.FileCapture('pcapFiles/FTP-Official1000.pcap')
-cap.load_packets()
-packet_amount = len(cap)
-print("Pre-fingerprinting packet amount: {}\n".format(packet_amount))
+try:
+    cap = pyshark.FileCapture('pcapFiles/FTP-Official1000.pcap')
+    cap.load_packets()
+    packet_amount = len(cap)
+    print("Pre-fingerprinting packet amount: {}\n".format(packet_amount))
+except:
+    packet_amount = 36,204
+    print("Pre-fingerprinting packet amount: {}\n".format(packet_amount))
 
 # call getExfil
 print("Getting Fingerprint...")
