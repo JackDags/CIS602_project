@@ -20,7 +20,7 @@ GENERAL PLAN:
 print("Counting total packets...")
 print("This may take several minutes")
 cap = pyshark.FileCapture('pcapFiles/FTP-Official1000.pcap')
-# cap.load_packets()
+cap.load_packets()
 packet_amount = len(cap)
 print("Pre-fingerprinting packet amount: {}\n".format(packet_amount))
 
